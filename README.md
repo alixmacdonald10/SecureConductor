@@ -1,4 +1,6 @@
-![secure-conductor](./docs/images/secure-conductor.png =x250)
+<p align="center">
+  <img align="center" width="33%" src="./docs/images/secure-conductor.png" >
+</p>
 
 # SecureConductor
 SecureConductor is a tool designed to handle secret management within a Kubernetes environment. It ensures consistency in Kubernetes configurations across various platforms, allowing for platform-agnostic deployments.
