@@ -1,8 +1,18 @@
-[package]
-name = "secure-conductor"
-version = "0.1.0"
-edition = "2021"
+[workspace]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+members = [
+    "secure-conductor", "secure-conductor-broker",
+]
 
-[dependencies]
+[profile.dev]
+codegen-units = 16
+opt-level = 0
+incremental = true
+debug = true
+
+[profile.release]
+codegen-units = 1
+strip = "symbols"
+lto = "fat"
+panic = "abort"
+opt-level = 3
